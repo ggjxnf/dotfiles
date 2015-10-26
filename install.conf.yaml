@@ -1,0 +1,20 @@
+- clean: ['~']
+
+- link:
+    ~/.gemrc: .gemrc
+    ~/.gitconfig: .gitconfig
+    ~/.githelpers: .githelpers
+    ~/.gitignore_global: .gitignore_global
+    ~/.powconfig: .powconfig
+    ~/.tmux: .tmux/
+    ~/.tmux.conf: .tmux/tmux.conf
+    ~/.tmuxinator: .tmuxinator/
+    ~/.vim: .vim/
+    ~/.vimrc: .vim/vimrc
+    ~/.nvim: .vim/
+    ~/.nvimrc: .vim/vimrc
+    ~/.zprofile: .zprofile
+    ~/.zshrc: .zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
