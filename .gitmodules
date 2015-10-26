@@ -43,3 +43,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule ".vim/bundle/elm.vim"]
+	path = .vim/bundle/elm.vim
+	url = https://github.com/lambdatoast/elm.vim.git
