@@ -10,9 +10,10 @@
     ~/.tmux.conf: .tmux/tmux.conf
     ~/.tmuxinator: .tmuxinator/
     ~/.vim: .vim/
-    ~/.vimrc: .vim/vimrc
-    ~/.nvim: .vim/
-    ~/.nvimrc: .vim/vimrc
+    ~/.vimrc: .vim/init.vim
+    ~/.config/nvim:
+      create: true
+      path: .vim/
     ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
 
