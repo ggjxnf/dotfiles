@@ -46,6 +46,7 @@
     tool = vimdiff
 [push]
 	default = simple
+	followTags = true
 [core]
 	excludesfile = /Users/andrey/.gitignore_global
 [difftool "sourcetree"]
