@@ -83,8 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 PATH="/usr/local/bin:/opt/chefdk/bin:$PATH"
 #PATH="/usr/local/share/npm/bin:$PATH"
@@ -101,5 +99,9 @@ export LC_CTYPE='ru_RU.UTF-8'
 
 # zsh vi mode
 bindkey -v
+
+if [ -f ~/.zshrc_local ]; then source ~/.zshrc_local; fi
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
