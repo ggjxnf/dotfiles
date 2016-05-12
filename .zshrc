@@ -90,6 +90,7 @@ PATH="/usr/local/bin:/opt/chefdk/bin:$PATH"
 
 # alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+alias mux=tmuxinator
 
 export EDITOR='vim'
 
