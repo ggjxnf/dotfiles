@@ -1,7 +1,7 @@
-# ~/.tmuxinator/titul-site.yml
+# ~/.tmuxinator/impuls.yml
 
-name: titul-site
-root: ~/projects/rails/titul-site
+name: impuls
+root: ~/projects/rails/impuls
 
 # Optional tmux socket
 # socket_name: foo
@@ -25,4 +25,4 @@ pre:
 windows:
   - git:
   - server: bin/rails s
-  - postgres: psql titul_site_development
+  - psql: psql impuls_development
