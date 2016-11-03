@@ -14,6 +14,7 @@ set wrap
 
 set nobackup nowritebackup
 set directory=~/.vim/tmp,~/tmp,.,/var/tmp,/tmp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 syntax on
 filetype plugin indent on
