@@ -21,9 +21,12 @@ filetype plugin indent on
 
 set wildmode=longest,list
 set wildmenu
+set showcmd
 
 set list
 set listchars=tab:▸\ ,eol:¬
+
+set backspace=indent,eol,start " intuitive backspacing
 
 " set ts=4 sts=4 sw=4 expandtab
 
