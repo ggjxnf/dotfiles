@@ -9,8 +9,9 @@ root: ~/projects/rails/smartomato
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 
-pre:
+on_project_first_start:
   - open /Applications/Postgres.app
+on_project_start:
   - mvim
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
@@ -25,8 +26,13 @@ pre:
 windows:
   - git:
   - server: bin/rails s
+  - postgres: psql smartomato_development
   - mongo:
       layout: even-vertical
       panes:
         - mongod --config /usr/local/etc/mongod.conf
         - bundle exec rackup faye.ru -s thin -E production -p 9293
+        - redis-server /usr/local/etc/redis.conf
+  - board:
+    - cd ../board
+    - yarn run server

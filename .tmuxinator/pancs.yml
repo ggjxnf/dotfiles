@@ -1,7 +1,7 @@
-# ~/.tmuxinator/titul-site.yml
+# ~/.tmuxinator/pancs.yml
 
-name: titul-site
-root: ~/projects/rails/titul-site
+name: pancs
+root: ~/projects/rails/pancs
 
 # Optional tmux socket
 # socket_name: foo
@@ -26,4 +26,4 @@ on_project_start:
 windows:
   - git:
   - server: bin/rails s
-  - postgres: psql titul_site_development
+  - psql: psql pancs_development

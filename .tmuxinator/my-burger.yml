@@ -1,7 +1,7 @@
-# ~/.tmuxinator/titul-site.yml
+# ~/.tmuxinator/my-burger.yml
 
-name: titul-site
-root: ~/projects/rails/titul-site
+name: my-burger
+root: ~/projects/rails/my-burger
 
 # Optional tmux socket
 # socket_name: foo
@@ -26,4 +26,4 @@ on_project_start:
 windows:
   - git:
   - server: bin/rails s
-  - postgres: psql titul_site_development
+  - psql: psql my_burger_development

@@ -9,8 +9,9 @@ root: ~/projects/rails/impuls
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 
-pre:
+on_project_first_start:
   - open /Applications/Postgres.app
+on_project_start:
   - mvim
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.

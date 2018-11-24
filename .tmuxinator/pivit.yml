@@ -1,7 +1,7 @@
-# ~/.tmuxinator/titul-site.yml
+# ~/.tmuxinator/pivit.yml
 
-name: titul-site
-root: ~/projects/rails/titul-site
+name: pivit
+root: ~/projects/rails/pivit
 
 # Optional tmux socket
 # socket_name: foo
@@ -26,4 +26,5 @@ on_project_start:
 windows:
   - git:
   - server: bin/rails s
-  - postgres: psql titul_site_development
+  - psql: psql pivit_development
+  - redis: redis-server /usr/local/etc/redis.conf

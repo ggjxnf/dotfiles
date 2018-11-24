@@ -1,7 +1,7 @@
-# ~/.tmuxinator/e-region.yml
+# ~/.tmuxinator/sweeps.yml
 
-name: titul
-root: ~/projects/rails/e-region
+name: sweeps
+root: ~/projects/rails/sweeps
 
 # Optional tmux socket
 # socket_name: foo
@@ -9,8 +9,9 @@ root: ~/projects/rails/e-region
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 
-pre:
+on_project_first_start:
   - open /Applications/Postgres.app
+on_project_start:
   - mvim
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
@@ -25,3 +26,6 @@ pre:
 windows:
   - git:
   - server: bin/rails s
+  - psql: psql sweeps_development
+  - tunnel: ssh deploy@sweeps-dev -L 3001:52.214.179.122:3000 -N
+  # - redis: redis-server /usr/local/etc/redis.conf

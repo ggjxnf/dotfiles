@@ -85,6 +85,7 @@ source $ZSH/oh-my-zsh.sh
 
 PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 PATH="/usr/local/bin:/opt/chefdk/bin:$PATH"
+PATH="$PATH:/usr/local/opt/python@2/bin"
 #PATH="/usr/local/share/npm/bin:$PATH"
 #PATH="$HOME/.rbenv/bin:$PATH"
 
