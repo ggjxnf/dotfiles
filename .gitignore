@@ -1,5 +1,7 @@
 *.DS_Store
 
+/.vim/plugged
+
 /.CFUserTextEncoding
 /.Xauthority
 /.bash_history

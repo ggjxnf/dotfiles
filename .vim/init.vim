@@ -1,5 +1,28 @@
 set nocompatible
-call pathogen#infect()
+" call pathogen#infect()
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'fatih/vim-go'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rbenv'
+" Plug 'jpalardy/vim-slime'
+" Plug 'cespare/vim-toml'
+" Plug 'lambdatoast/elm.vim'
+" Plug 'keith/swift.vim'
+" Plug 'nazo/pt.vim'
+" Plug 'elixir-lang/vim-elixir'
+Plug 'jpo/vim-railscasts-theme'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()
 
 " let mapleader = ","
 let mapleader = "\\"
@@ -40,6 +63,7 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype slim setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype dart setlocal ts=2 sts=2 sw=2 expandtab
 au BufRead,BufNewFile *.rake setfiletype ruby
 
 autocmd Filetype ruby map <Leader>r :w !ruby<CR>
@@ -70,4 +94,9 @@ let g:lightline = {
 " :set background=dark
 
 let g:slime_target = "tmux"
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
