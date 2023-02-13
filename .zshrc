@@ -53,7 +53,7 @@ plugins=(git brew bundler vagrant capistrano rails tmux tmuxinator)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -89,6 +89,7 @@ PATH="$PATH:/usr/local/opt/python@2/bin"
 #PATH="/usr/local/share/npm/bin:$PATH"
 #PATH="$HOME/.rbenv/bin:$PATH"
 PATH="$HOME/flutter/bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
 
 # alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
@@ -114,5 +115,12 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 # [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+# fix brew completions
+if type brew &>/dev/null; then
+	FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
+	autoload -Uz compinit
+	compinit
+fi
 
 # test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
